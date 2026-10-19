@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/black_apps_about_us/code.html" },
+    { "source": "/services", "destination": "/black_apps_services_overview/code.html" },
+    { "source": "/contact", "destination": "/black_apps_contact_us/code.html" },
+    { "source": "/blog", "destination": "/black_apps_blog_insights/code.html" },
+    { "source": "/blog/technical-article", "destination": "/black_apps_technical_article_detail/code.html" },
+    { "source": "/services/erp-project-rescue", "destination": "/black_apps_erp_project_rescue/code.html" },
+    { "source": "/services/cloud-erp-implementation", "destination": "/black_apps_cloud_erp_implementation/code.html" },
+    { "source": "/services/performance-optimization", "destination": "/black_apps_performance_optimization/code.html" },
+    { "source": "/services/support-desk", "destination": "/black_apps_continuous_support_desk/code.html" }
+  ]
+}
