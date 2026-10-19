@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#c3f5ff", "on-tertiary": "#00363a", "on-primary-fixed": "#001f24", "surface-variant": "#31353e", "surface-elevated": "#111827", "background": "#0f131c", "on-primary-fixed-variant": "#004f58", "secondary-fixed-dim": "#4cd7f6", "on-surface": "#dfe2ee", "inverse-surface": "#dfe2ee", "primary-fixed": "#9cf0ff", "inverse-primary": "#006875", "on-tertiary-fixed-variant": "#004f54", "on-secondary-container": "#00424e", "on-surface-variant": "#bac9cc", "outline": "#849396", "on-tertiary-fixed": "#002022", "primary-container": "#00e5ff", "surface-container-highest": "#31353e", "surface": "#0f131c", "border-active": "rgba(0, 229, 255, 0.4)", "surface-overlay": "#1E293B", "border-glass": "rgba(255, 255, 255, 0.08)", "surface-container-lowest": "#0a0e16", "on-tertiary-container": "#006369", "secondary-container": "#03b5d3", "surface-container": "#1c2028", "on-error-container": "#ffdad6", "text-primary": "#F8FAFC", "surface-base": "#0B0F17", "on-secondary": "#003640", "error": "#ffb4ab", "surface-container-high": "#262a33", "surface-dim": "#0f131c", "on-primary": "#00363d", "inverse-on-surface": "#2c3039", "warning": "#F59E0B", "tertiary-container": "#7fdfe8", "primary-fixed-dim": "#00daf3", "surface-bright": "#353942", "on-error": "#690005", "on-primary-container": "#00626e", "glow-cyan": "rgba(0, 229, 255, 0.15)", "text-muted": "#64748B", "secondary": "#4cd7f6", "on-background": "#dfe2ee", "on-secondary-fixed": "#001f26", "outline-variant": "#3b494c", "on-secondary-fixed-variant": "#004e5c", "danger": "#EF4444", "error-container": "#93000a", "ice-cyan": "#BAE3F8", "surface-tint": "#00daf3", "text-secondary": "#94A3B8", "tertiary-fixed-dim": "#75d5de", "tertiary": "#b3f9ff", "tertiary-fixed": "#92f2fa", "success": "#10B981", "surface-container-low": "#181c24", "secondary-fixed": "#acedff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2.5rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-3xl": "6rem", "space-lg": "1.5rem", "space-2xl": "4rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "label-badge": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-code": ["JetBrains Mono"] }, "fontSize": { "headline-sm": ["1.25rem", { "lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600" }], "label-badge": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.6", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }], "headline-lg-mobile": ["1.75rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-hero-mobile": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero": ["3.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["1rem", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }], "label-code": ["0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.06em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-[1320px] mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 flex-shrink-0"><img alt="Black Apps Inc. isometric 3D cube logo with transparent background, pure white and electric cyan typography on dark isometric cube faces with glowing cyan geometric borders." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U0oHReaaPLoOthvC9IEPIRuC_3gnRrZu0Es6nkXUKwkhtytyortsPWzmQWdoL6LN_SVY6bS300SX58mc1IPMtrRpNWbdkvnPWwiQmclR-Zne28lqp593tIGmCoXEQsNwKpeoiFnEsbuL7Bd1SjFXienFG-TlwV3Wl9JMdtsI_0wP04xc73p0GsMLBJDZHwUm4UAzzSEChfg_YtqfR5ZxLu2Qfkd8-TxeGUGqjsfst3pPfJr6qYrbeM4R8h"/><a class="flex flex-col" data-path="home" href="#"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-primary">Black Apps</span><span class="font-label-code text-label-code text-secondary tracking-widest uppercase">Dynamics 365 BC</span></a></div><nav class="hidden lg:flex items-center gap-8" data-active-classes="text-primary-container font-semibold"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><div class="relative group py-2"><button class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface flex items-center gap-1 transition-colors" type="button"><span>Services</span><span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full hidden group-hover:flex flex-col w-64 bg-surface-overlay backdrop-blur-xl rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.5)] p-2 transition-all"><a aria-current="page" class="hover:bg-surface-container-high px-3 py-2 rounded-lg transition-colors text-primary-container font-semibold" data-path="cloud-erp-implementation" href="#">Cloud ERP Implementation</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-3 py-2 rounded-lg transition-colors" data-path="continuous-support-desk" href="#">Continuous Support Desk</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-3 py-2 rounded-lg transition-colors" data-path="erp-project-rescue" href="#">ERP Project Rescue</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high px-3 py-2 rounded-lg transition-colors" data-path="performance-optimization" href="#">Performance Optimization</a></div></div><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-4"><a class="font-body-sm text-body-sm font-semibold bg-primary-container text-surface-base px-5 py-2.5 rounded-lg shadow-[0_0_20px_rgba(0,229,255,0.35)] hover:shadow-[0_0_28px_rgba(0,229,255,0.5)] hover:bg-primary-fixed transition-all flex items-center justify-center whitespace-nowrap" data-path="book-a-consultation" href="#">Book a Consultation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Field -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[360px] bg-gradient-to-b from-primary-container/10 via-secondary/5 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<!-- Container -->
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12 pt-8 pb-20">
+<!-- 1. Breadcrumbs -->
+<nav aria-label="Breadcrumbs" class="flex items-center gap-2 mb-8">
+<a class="font-label-code text-label-code text-text-muted hover:text-primary-container transition-colors uppercase tracking-wider flex items-center gap-1.5" data-path="home" href="#">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+          Home
+        </a>
+<span class="text-text-muted font-label-code text-label-code">/</span>
+<span class="font-label-code text-label-code text-secondary tracking-wider uppercase">Services</span>
+</nav>
+<!-- 2. Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pb-16">
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2.5 self-start px-3.5 py-1.5 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-code text-label-code uppercase tracking-widest text-secondary font-semibold">// ENTERPRISE PRACTICE OVERVIEW</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-text-primary tracking-tight">
+            Full-Lifecycle Dynamics 365 <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-secondary to-primary-fixed">Business Central</span> Engineering.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            From high-concurrency cloud migrations to urgent project rescues, we deliver audited AL code and predictable enterprise operational velocity.
+          </p>
+<div class="flex flex-col sm:flex-row sm:items-center gap-5 pt-2">
+<a class="font-body-md text-body-md font-semibold bg-primary-container text-surface-base px-7 py-3.5 rounded-lg shadow-[0_0_24px_rgba(0,229,255,0.35)] hover:shadow-[0_0_32px_rgba(0,229,255,0.5)] hover:bg-primary-fixed transition-all inline-flex items-center justify-center gap-2" href="#evaluate">
+<span>Book a Free Consultation</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="font-body-md text-body-md font-semibold bg-surface-container text-text-primary hover:text-primary-container hover:bg-surface-container-high px-7 py-3.5 rounded-lg transition-all inline-flex items-center justify-center gap-2" href="#comparison-matrix">
+<span class="material-symbols-outlined text-[20px] text-secondary">tune</span>
+<span>Compare Practice Areas</span>
+</a>
+</div>
+<div class="flex items-center gap-2 text-text-muted pt-1">
+<span class="material-symbols-outlined text-[16px] text-success">verified</span>
+<span class="font-body-sm text-body-sm">No obligation. We reply within one business day.</span>
+</div>
+</div>
+<!-- Telemetry Graphic / Visual Showcase -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="bg-surface-elevated rounded-xl p-6 shadow-xl relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary-container/10 blur-2xl rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between pb-4">
+<span class="font-label-code text-label-code text-secondary tracking-widest uppercase">BC_ENGINEERING_CORE</span>
+<span class="font-label-badge text-label-badge text-success bg-surface-container px-2 py-0.5 rounded">ONLINE</span>
+</div>
+<!-- Inline SVG Gauge Chart (Under 2KB) -->
+<div class="py-2 flex items-center justify-center">
+<svg class="w-48 h-28 overflow-visible" viewbox="0 0 160 90">
+<path d="M 20 80 A 60 60 0 0 1 140 80" fill="none" stroke="#262a33" stroke-linecap="round" stroke-width="12"></path>
+<path d="M 20 80 A 60 60 0 0 1 128 42" fill="none" stroke="#00e5ff" stroke-dasharray="190" stroke-dashoffset="30" stroke-linecap="round" stroke-width="12"></path>
+<text class="font-headline-md text-headline-md font-bold" fill="#F8FAFC" text-anchor="middle" x="80" y="70">99.98%</text>
+<text class="font-label-code text-label-code uppercase" fill="#64748B" text-anchor="middle" x="80" y="86">AL Code Integrity</text>
+</svg>
+</div>
+<div class="space-y-3 pt-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Avg. Rescue Audit Window
+                </span>
+<span class="font-label-code text-label-code text-primary-container font-semibold">48 Hours</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Lock Deadlock Reductions
+                </span>
+<span class="font-label-code text-label-code text-primary-container font-semibold">-86.4%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Major Wave Release SLA
+                </span>
+<span class="font-label-code text-label-code text-text-primary font-semibold">&lt; 4 Hours</span>
+</div>
+</div>
+</div>
+<!-- Secondary Visual Card -->
+<div class="bg-surface-container rounded-xl p-4 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-code text-label-code text-text-muted uppercase">Native AL Pipeline</span>
+<span class="font-body-sm text-body-sm text-text-primary font-medium truncate">Zero Base Modifications • Pure Event Subscriptions</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Four Comprehensive Service Pillars -->
+<section class="w-full bg-surface-container-lowest py-24 shadow-inner">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div class="flex flex-col gap-2 max-w-xl">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span>Disciplined Technical Delivery</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">
+            Four Pillars. Zero Unpredictable Outages.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Each practice domain is staffed strictly by senior Business Central architects, AL developers, and Microsoft-certified infrastructure engineers.
+          </p>
+</div>
+<div class="hidden lg:flex items-center gap-3 text-text-muted font-label-code text-label-code">
+<span>// ISO_COMPLIANT</span>
+<span>•</span>
+<span>TELEMETRY_DRIVEN</span>
+</div>
+</div>
+<!-- Grid of 4 Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 01 -->
+<div class="group bg-surface-elevated rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-[0_0_28px_rgba(0,229,255,0.2)]">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-surface-base transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[28px]">rocket_launch</span>
+</div>
+<span class="font-label-code text-label-code text-text-muted font-semibold group-hover:text-secondary transition-colors">01 // CORE</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">
+                Cloud ERP Implementation
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Clean AL architecture, zero-loss multi-entity cutovers, and fixed-milestone pricing. Engineered for rapid time-to-value without fragile customizations.
+              </p>
+</div>
+<div class="space-y-2 pt-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Automated Data Migration Pipelines</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Multi-Company Intercompany Setup</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Deterministic Milestone Delivery</span>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-6">
+<a class="inline-flex items-center gap-2 font-body-sm text-body-sm font-semibold text-primary-container hover:text-primary transition-colors" href="#evaluate">
+<span>Explore Implementation Specs</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pillar 02 -->
+<div class="group bg-surface-elevated rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-[0_0_28px_rgba(0,229,255,0.2)]">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-surface-base transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[28px]">headset_mic</span>
+</div>
+<span class="font-label-code text-label-code text-text-muted font-semibold group-hover:text-secondary transition-colors">02 // OPS</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">
+                Continuous Support Desk
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Dedicated Slack/Teams architect bridge, major Microsoft Wave release testing, and sub-4hr SLAs. Direct access to elite engineering, never tier-1 script readers.
+              </p>
+</div>
+<div class="space-y-2 pt-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Direct Slack/Teams War-Rooms</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Bi-Annual Wave Sandbox Audits</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Guaranteed Sub-4hr P1 SLA</span>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-6">
+<a class="inline-flex items-center gap-2 font-body-sm text-body-sm font-semibold text-primary-container hover:text-primary transition-colors" href="#evaluate">
+<span>View SLA Commitments</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pillar 03 -->
+<div class="group bg-surface-elevated rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-[0_0_28px_rgba(0,229,255,0.2)]">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-surface-base transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[28px]">emergency</span>
+</div>
+<span class="font-label-code text-label-code text-text-muted font-semibold group-hover:text-secondary transition-colors">03 // RESCUE</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">
+                ERP Project Rescue
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                48-hour emergency diagnostic audit, ledger reconciliation, and corrupted codebase stabilization. We take over broken implementations and bring them to go-live safely.
+              </p>
+</div>
+<div class="space-y-2 pt-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Emergency 48-Hour Technical Triage</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Failed Migration Ledger Balancing</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Bad Vendor Code Base Refactor</span>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-6">
+<a class="inline-flex items-center gap-2 font-body-sm text-body-sm font-semibold text-primary-container hover:text-primary transition-colors" href="#evaluate">
+<span>Initiate Emergency Triage</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pillar 04 -->
+<div class="group bg-surface-elevated rounded-xl p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-[0_0_28px_rgba(0,229,255,0.2)]">
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="w-14 h-14 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-surface-base transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<span class="font-label-code text-label-code text-text-muted font-semibold group-hover:text-secondary transition-colors">04 // TELEMETRY</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-text-primary mb-3">
+                Performance Optimization
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                SQL deadlock elimination, KQL telemetry profiling, and sub-second transaction throughput. Remove system lags during peak volume posting without expensive compute upgrades.
+              </p>
+</div>
+<div class="space-y-2 pt-4">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Azure Application Insights &amp; KQL</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>SQL Server Locking Resolution</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-text-primary">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>High-Volume Background Job Tuning</span>
+</div>
+</div>
+</div>
+<div class="pt-8 mt-6">
+<a class="inline-flex items-center gap-2 font-body-sm text-body-sm font-semibold text-primary-container hover:text-primary transition-colors" href="#evaluate">
+<span>Request Profiling Audit</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Section / Architecture in Action -->
+<section class="max-w-[1320px] mx-auto px-6 lg:px-12 py-20 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Surgical Technical Standards</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">
+          Enterprise ERP Demands Engineering, Not Generic Configuration.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Most Dynamics 365 BC implementations fail because traditional partners rely on point-and-click customizations and unmonitored AppSource bloat. We treat Business Central as a high-performance distributed application.
+        </p>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-surface-elevated p-5 rounded-lg shadow-sm">
+<span class="font-label-code text-label-code text-secondary">01 // CODE ARCHITECTURE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Zero intrusive base extensions; clean event isolation protects future updates.</p>
+</div>
+<div class="bg-surface-elevated p-5 rounded-lg shadow-sm">
+<span class="font-label-code text-label-code text-secondary">02 // OBSERVABILITY</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Live Kusto query telemetry monitors locks, memory spikes, and failed web services.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-[420px] object-cover" data-alt="High-tech dark operations room featuring an enterprise systems engineer monitoring high-concurrency cloud ERP databases across multiple ultrawide monitors. Soft electric cyan ambient backlighting illuminating lines of clean code, database telemetry charts, and system operational graphs in deep charcoal and obsidian aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYIGp5Sukv99yA7GWQe6Y1Tvn0xIbq3yYXCf7r15H5NZ35tFBma8f3aBuWt1z6T1wJKo0exxlPF6UAouPYhmTmI-DPvuy22Vojdj8mIowHqmghpx7opD6BVp6sIoPbfXuqNLDyzMzqu_BvUqUAbyufZSuKuU5ev2Cbz24YNWKP7e8o0_-SbF9-uY-PnpSRJFiJJN5Qt6L2VLhoBlUbgyIo0DPbwviQKI_3nUB27DkP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-elevated via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-surface-container/90 backdrop-blur-md shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-[24px]">terminal</span>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">AL Language Continuous Integration</p>
+<p class="font-label-code text-label-code text-text-muted">Automated compiler validations &amp; AppSource tests</p>
+</div>
+</div>
+<span class="font-label-badge text-label-badge text-success bg-surface-elevated px-2.5 py-1 rounded">BUILD PASSED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Comparison Matrix & Engagement Models -->
+<section class="w-full bg-surface-container py-24 scroll-mt-20" id="comparison-matrix">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-3">
+<div class="inline-flex items-center justify-center gap-2 font-label-code text-label-code text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>PRACTICE MATRIX &amp; ENGAGEMENT MODELS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">
+          Select Your Engagement Vector
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Clear scope boundaries, predictable project horizons, and structured deliverables calibrated to your operational readiness.
+        </p>
+</div>
+<!-- Matrix Table Container -->
+<div class="bg-surface-elevated rounded-xl shadow-xl overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-5 font-label-code text-label-code text-text-muted uppercase tracking-wider">Practice Domain</th>
+<th class="p-5 font-label-code text-label-code text-text-muted uppercase tracking-wider">When to Engage</th>
+<th class="p-5 font-label-code text-label-code text-text-muted uppercase tracking-wider">Typical Delivery Window</th>
+<th class="p-5 font-label-code text-label-code text-text-muted uppercase tracking-wider">Engagement Structure</th>
+<th class="p-5 font-label-code text-label-code text-text-muted uppercase tracking-wider text-right">Core Metric</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-5 font-semibold text-text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">rocket_launch</span>
+<span>Cloud ERP Implementation</span>
+</td>
+<td class="p-5 text-on-surface-variant">
+                Replacing legacy NAV/GP/QuickBooks, net-new international expansion, or moving on-prem NAV to BC Cloud.
+              </td>
+<td class="p-5 font-label-code text-label-code text-text-primary">
+                12 – 24 Weeks
+              </td>
+<td class="p-5">
+<span class="font-label-badge text-label-badge uppercase px-2.5 py-1 rounded bg-surface-container-high text-primary-container">
+                  Fixed Milestone SOW
+                </span>
+</td>
+<td class="p-5 text-right font-label-code text-label-code text-success font-semibold">
+                100% On-Time Cutover
+              </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-5 font-semibold text-text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">headset_mic</span>
+<span>Continuous Support Desk</span>
+</td>
+<td class="p-5 text-on-surface-variant">
+                Live BC systems requiring senior incident support, routine extension development, and biannual wave readiness.
+              </td>
+<td class="p-5 font-label-code text-label-code text-text-primary">
+                Ongoing (Monthly Retainer)
+              </td>
+<td class="p-5">
+<span class="font-label-badge text-label-badge uppercase px-2.5 py-1 rounded bg-surface-container-high text-secondary">
+                  Retained SLA Tier
+                </span>
+</td>
+<td class="p-5 text-right font-label-code text-label-code text-success font-semibold">
+                &lt; 4hr P1 Resolution
+              </td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-5 font-semibold text-text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">emergency</span>
+<span>ERP Project Rescue</span>
+</td>
+<td class="p-5 text-on-surface-variant">
+                Stalled go-live with existing partner, unreconciled posting journals, broken third-party integrations, or code collapse.
+              </td>
+<td class="p-5 font-label-code text-label-code text-text-primary">
+                48hr Audit + 4–8 Wk Fix
+              </td>
+<td class="p-5">
+<span class="font-label-badge text-label-badge uppercase px-2.5 py-1 rounded bg-surface-container-high text-warning">
+                  Rapid Triage Sprint
+                </span>
+</td>
+<td class="p-5 text-right font-label-code text-label-code text-warning font-semibold">
+                48h Diagnostic SOW
+              </td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="p-5 font-semibold text-text-primary flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-secondary">speed</span>
+<span>Performance Optimization</span>
+</td>
+<td class="p-5 text-on-surface-variant">
+                Intermittent SQL page lockups, prolonged ledger batch posting, slow web service API syncs during peak transactional loads.
+              </td>
+<td class="p-5 font-label-code text-label-code text-text-primary">
+                2 – 4 Weeks
+              </td>
+<td class="p-5">
+<span class="font-label-badge text-label-badge uppercase px-2.5 py-1 rounded bg-surface-container-high text-primary-container">
+                  Telemetry Health Audit
+                </span>
+</td>
+<td class="p-5 text-right font-label-code text-label-code text-success font-semibold">
+                Sub-Second Queries
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- 5. Short Inline Contact Form -->
+<section class="max-w-[1320px] mx-auto px-6 lg:px-12 py-24 w-full scroll-mt-20" id="evaluate">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Copy Details -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">assignment</span>
+<span>CONFIDENTIAL ASSESSMENT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">
+          Request Practice Scope Evaluation
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Tell us about your Business Central environment, operational challenges, or upcoming migration timetable. You'll speak directly with a Principal AL Architect.
+        </p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5">verified_user</span>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">Strict Confidentiality &amp; NDA</p>
+<p class="font-body-sm text-body-sm text-text-muted">Your database schemas and ledger details remain completely protected.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] flex-shrink-0 mt-0.5">speed</span>
+<div>
+<p class="font-body-sm text-body-sm font-semibold text-text-primary">Rapid Technical Feedback</p>
+<p class="font-body-sm text-body-sm text-text-muted">No aggressive sales pitching. Purely technical feasibility and architecture review.</p>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container flex items-center gap-4 mt-2 shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</div>
+<div class="font-body-sm text-body-sm">
+<span class="text-text-primary font-medium">Prefer direct email?</span>
+<a class="block text-secondary hover:text-primary-container transition-colors" href="mailto:hello@black-apps.com">hello@black-apps.com</a>
+</div>
+</div>
+</div>
+<!-- Form Box -->
+<div class="lg:col-span-7 bg-surface-elevated rounded-xl p-8 shadow-xl relative">
+<form class="flex flex-col gap-6" id="practice-evaluation-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden'); this.reset();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Full Name -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-text-primary" for="fullName">Full Name *</label>
+<input class="bg-surface-base text-text-primary placeholder:text-text-muted px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="fullName" placeholder="Elena Rostova" required="" type="text"/>
+</div>
+<!-- Work Email -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-text-primary" for="workEmail">Work Email *</label>
+<input class="bg-surface-base text-text-primary placeholder:text-text-muted px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="workEmail" placeholder="e.rostova@enterprise.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Company -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-text-primary" for="company">Company / Organization *</label>
+<input class="bg-surface-base text-text-primary placeholder:text-text-muted px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="company" placeholder="Global Supply Dynamics Inc." required="" type="text"/>
+</div>
+<!-- Service of Interest -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-text-primary" for="serviceInterest">Service of Interest *</label>
+<select class="bg-surface-base text-text-primary px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container transition-all" id="serviceInterest" required="">
+<option disabled="" selected="" value="">Select Primary Practice Area</option>
+<option value="cloud-erp-implementation">Cloud ERP Implementation</option>
+<option value="continuous-support-desk">Continuous Support Desk</option>
+<option value="erp-project-rescue">ERP Project Rescue (Urgent)</option>
+<option value="performance-optimization">Performance Optimization</option>
+<option value="general-advisory">Architecture Advisory</option>
+</select>
+</div>
+</div>
+<!-- Brief Description -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-text-primary" for="description">Brief Description of System Context</label>
+<textarea class="bg-surface-base text-text-primary placeholder:text-text-muted px-4 py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary-container transition-all resize-none" id="description" placeholder="Brief details about user count, current ERP release version (e.g. NAV 2018 or BC SaaS v24), key bottlenecks or implementation deadlines..." rows="4"></textarea>
+</div>
+<!-- Submit Button & Guarantee -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<button class="font-body-md text-body-md font-semibold bg-primary-container text-surface-base px-8 py-3.5 rounded-lg shadow-[0_0_24px_rgba(0,229,255,0.35)] hover:shadow-[0_0_32px_rgba(0,229,255,0.5)] hover:bg-primary-fixed transition-all flex items-center justify-center gap-2" type="submit">
+<span>Submit Scope Evaluation</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<div class="flex items-center gap-2 text-text-muted font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-success">verified</span>
+<span>No obligation. We reply within one business day.</span>
+</div>
+</div>
+<!-- Inline Success State -->
+<div class="hidden p-4 rounded-lg bg-surface-container text-primary-container flex items-center gap-3" id="form-feedback">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<div class="font-body-sm text-body-sm">
+<strong class="font-semibold text-text-primary block">Evaluation Request Received.</strong>
+              An AL systems engineer will analyze your scenario and respond within one business day.
+            </div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- 6. Standard Bottom CTA Banner -->
+<section class="w-full bg-gradient-to-b from-surface to-surface-container-lowest py-20 relative overflow-hidden">
+<div class="max-w-[1320px] mx-auto px-6 lg:px-12 relative z-10">
+<div class="bg-surface-elevated rounded-2xl p-10 lg:p-14 shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8">
+<!-- Ambient internal glow -->
+<div class="absolute -top-24 -left-24 w-80 h-80 bg-primary-container/10 blur-3xl rounded-full pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-24 w-80 h-80 bg-secondary/10 blur-3xl rounded-full pointer-events-none"></div>
+<div class="flex flex-col gap-4 max-w-2xl relative z-10">
+<div class="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full bg-surface-container-high">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-text-primary">Direct Partner Engineering</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary">
+            Ready to upgrade, rescue, or scale your Business Central system?
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Connect directly with architects who have executed high-concurrency implementations, resolved complex SQL deadlocks, and delivered audited AL solutions across North America.
+          </p>
+<div class="flex items-center gap-2 pt-2 text-text-muted">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm">Guaranteed response within one business day. No sales intermediaries.</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-4 w-full sm:w-auto flex-shrink-0 relative z-10">
+<a class="font-body-md text-body-md font-semibold bg-primary-container text-surface-base px-8 py-4 rounded-lg shadow-[0_0_24px_rgba(0,229,255,0.35)] hover:shadow-[0_0_32px_rgba(0,229,255,0.5)] hover:bg-primary-fixed transition-all text-center flex items-center justify-center gap-2" href="#evaluate">
+<span>Schedule Architecture Review</span>
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</a>
+<a class="font-body-md text-body-md font-semibold bg-surface-container text-text-primary hover:text-primary-container hover:bg-surface-container-high px-8 py-4 rounded-lg transition-all text-center flex items-center justify-center gap-2" href="mailto:hello@black-apps.com">
+<span>Email Direct Engineering</span>
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest mt-auto shadow-[0_-1px_16px_rgba(0,0,0,0.3)]"><div class="max-w-[1320px] mx-auto px-6 lg:px-12 py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12"><div class="lg:col-span-4 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Black Apps Inc. isometric 3D cube logo with transparent background, pure white and electric cyan typography on dark isometric cube faces with glowing cyan geometric borders." class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U0oHReaaPLoOthvC9IEPIRuC_3gnRrZu0Es6nkXUKwkhtytyortsPWzmQWdoL6LN_SVY6bS300SX58mc1IPMtrRpNWbdkvnPWwiQmclR-Zne28lqp593tIGmCoXEQsNwKpeoiFnEsbuL7Bd1SjFXienFG-TlwV3Wl9JMdtsI_0wP04xc73p0GsMLBJDZHwUm4UAzzSEChfg_YtqfR5ZxLu2Qfkd8-TxeGUGqjsfst3pPfJr6qYrbeM4R8h"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-text-primary">Black Apps</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Microsoft Dynamics 365 Business Central Specialists. High-conviction enterprise ERP consulting, rescue operations, and systems architecture.</p><div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-surface-container-high shadow-[0_0_12px_rgba(0,229,255,0.1)]"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary">Certified Dynamics 365 Partner</span></div></div><div class="lg:col-span-2 flex flex-col gap-3"><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline">Navigation</h4><nav class="flex flex-col gap-2.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="blog" href="#">Blog</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="lg:col-span-3 flex flex-col gap-3"><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline">Practice Areas</h4><nav class="flex flex-col gap-2.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="cloud-erp-implementation" href="#">Cloud ERP Implementation</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="continuous-support-desk" href="#">Continuous Support Desk</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="erp-project-rescue" href="#">ERP Project Rescue</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="performance-optimization" href="#">Performance Optimization</a></nav></div><div class="lg:col-span-3 flex flex-col gap-3"><h4 class="font-label-code text-label-code uppercase tracking-wider text-outline">Direct Inquiries</h4><div class="flex flex-col gap-2.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="mailto:hello@black-apps.com">hello@black-apps.com</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors" href="tel:+18005550199">+1 (800) 555-0199</a><span class="font-body-sm text-body-sm text-text-muted">Microsoft Cloud Partner Network</span></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"><p class="font-body-sm text-body-sm text-text-muted">© 2025 Black Apps Inc. All rights reserved.</p><div class="flex items-center gap-6"><a class="font-body-sm text-body-sm text-text-muted hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-sm text-body-sm text-text-muted hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="font-body-sm text-body-sm text-text-muted hover:text-on-surface transition-colors" data-path="security" href="#">Security &amp; Compliance</a></div></div></div></footer></body></html>

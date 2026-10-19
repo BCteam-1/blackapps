@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <!-- Transparent background, crisp 3D isometric cube matching Black Apps brand -->
+  <g transform="translate(100, 100)">
+    <!-- Top Face of Cube -->
+    <polygon points="300,40 540,178 300,316 60,178" fill="#141923" stroke="#00E5FF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- Left Face of Cube with perspective text 'BLACK' -->
+    <polygon points="60,178 300,316 300,610 60,472" fill="#0D111A" stroke="#00E5FF" stroke-width="6" stroke-linejoin="round"/>
+    
+    <!-- Right Face of Cube with perspective text 'APPS Inc.' -->
+    <polygon points="300,316 540,178 540,472 300,610" fill="#080B10" stroke="#00E5FF" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Left Face Typography: BLACK -->
+    <!-- Sheared/transformed to match the isometric left plane -->
+    <g transform="matrix(0.866025, 0.5, 0, 1, 60, 178)">
+      <text x="25" y="195" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="82" fill="#FFFFFF" letter-spacing="2">BLACK</text>
+    </g>
+
+    <!-- Right Face Typography: APPS Inc. -->
+    <!-- Sheared/transformed to match the isometric right plane -->
+    <g transform="matrix(0.866025, -0.5, 0, 1, 300, 316)">
+      <text x="25" y="195" font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-weight="900" font-size="76" fill="#00E5FF" letter-spacing="1">APPS<tspan fill="#FFFFFF" font-size="52" font-weight="700"> Inc.</tspan></text>
+    </g>
+
+    <!-- Subtle accent edge lights -->
+    <line x1="300" y1="40" x2="300" y2="316" stroke="#00E5FF" stroke-width="3" opacity="0.8"/>
+    <line x1="300" y1="316" x2="300" y2="610" stroke="#00E5FF" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
